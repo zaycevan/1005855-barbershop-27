@@ -18,7 +18,7 @@
   <li> <a href="contacts.html"> КОНТАКТЫ </a>  </li>
 </ul>
 <ul class="user-navigation">
-  <li><button type="button"> ВХОД </button></li>
+  <li> <a href="login.html">ВХОД </a></li>
 </ul>
   </nav>
   </header>
@@ -57,13 +57,13 @@
     </section>
     <section>
       <h2>Фотогалерея</h2>
-      <figure>
+      <figure class="galery-content">
         <a href="#">
-          <img src="img/layer-21.jpg" width="286" height="164" alt="Интерьер">
+          <img src="img/photo-galery.jpg" width="286" height="164" alt="Интерьер">
         </a>
       </figure>
-      <button type="button">НАЗАД</button>
-      <button type="button">ВПЕРЕД</button>
+      <button class="button galery-button galery-back" type="button">НАЗАД</button>
+      <button class="button galery-button galery-next" type="button">ВПЕРЕД</button>
     </section>
     <section>
       <h2>Контактная информация</h2>
@@ -79,7 +79,25 @@
     <section>
       <h2>Записаться</h2>
       <p>УКАЖИТЕ ЖЕЛАЕМУЮ ДАТУ И ВРЕМЯ И МЫ СВЯЖЕМСЯ С ВАМИ ДЛЯ ПОДТВЕРЖДЕНИЯ БРОНИ</p>
-      <!-- здесь будет форма -->
+      <form class="record" method="post" action="https://echohtmlacademy.ru">
+      <p class="record-item">
+        <label for="record-date"> дата </label>
+        <input id="record-data" type="date" name="date" value="" placeholder="08.10.2017">
+      </p> 
+      <p class="record-item"> 
+        <label for="record-time"> время </label>
+        <input id="record-time" type="time" name="time" value="" placeholder="10:00">
+      </p>
+      <p class="record-item"> 
+        <label for="record-name"> ваше имя </label>
+        <input id="record-name" type="text" name="name" placeholder="Борода">
+      </p>
+      <p class="record-item"> 
+        <label for="record-phone"> телефон </label>
+        <input id="record-phone" type="tel" name="phone" placeholder="+7 123 456-78-90">
+      </p>       
+      <button class="button" type="submit">отправить</button>
+      </form>
     </section>
   </main>
   <footer>
@@ -101,13 +119,31 @@
   </footer>
   <section>
     <h2>Личный кабинет</h2>
-    <p>Введите свой логин и пароль.</p>
-    <!--здесь будет форма-->
-    <button type="button">Закрыть</button>
+    <p>Введите пожалуйста свой логин и пароль</p>
+    <form class="user" method="post" action="https://echohtmlacademy.ru">
+      <p>
+        <label class="visualy-hidden" for="user-login"> логин </label>
+        <input id="user-login" type="email" name="login" placeholder="логин">
+      </p> 
+      <p>
+        <label class="visualy-hidden" for="user-password"> пароль </label>
+        <input id="user-password" type="password" name="password" placeholder="пароль">
+      </p>
+      <p>
+      <input id="login-password-info" type="checkbox" name="remember">
+      <label class="login-checkbox" for="login-password-info" >Запомните меня </label>
+      <a href="#">Я забыл пароль!</a>
+      </p>
+      <button class="button" type="submit">войти</button>
+      </form>
+    <button class="button" type="button">Закрыть</button>
   </section>
   <section>
-    <h2>Как до нас добраться</h2>
-    <button type="button">Закрыть</button>
+    <h2 class="visualy-hidden">Как до нас добраться</h2>
+    <p>
+      <img src="img/map.jpg" width="780" height="574" alt="офис компании большая конюшенная 19/8">
+    </p>
+    <button class="modal-close" type="button">Закрыть</button>
   </section>
       </body>
 </html>
